@@ -1,0 +1,11 @@
+video list
+
+<ul>
+{% for video in video_list %}
+<li>
+    {{ video.title }}
+    {{ video.file.url }}
+    <img src="{{ video.photo.url }}" style="width: 100px;" />
+</li>
+{% endfor %}
+</ul>
