@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'catube',  # 현재 프로젝트에 catube 앱 등록
 ]
 
 MIDDLEWARE = [
