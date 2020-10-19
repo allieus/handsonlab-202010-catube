@@ -1,0 +1,36 @@
+{% load bootstrap4 %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Catube</title>
+
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    {% bootstrap_css %}
+    {% bootstrap_jquery %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="/" class="navbar-brand">
+                <i class="fa fa-youtube-play text-danger mr-1"></i>
+                CATUBE
+            </a>
+
+            <form action="/" method="get" class="form-inline">
+                <input type="text" class="form-control mr-2" name="q" value="{{ request.GET.q }}" />
+                <input type="submit" value="검색" class="btn btn-danger" />
+            </form>
+        </nav>
+
+        <div class="card">
+            <div class="card-body">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        &copy; 2020. Ask Company.
+    </div>
+</body>
+</html>
